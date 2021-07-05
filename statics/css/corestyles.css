@@ -1,0 +1,39 @@
+:root {
+    --color1: #56131a;
+    --color2: #812820;
+    --color3: #ba4d25;
+    --color4: #fa872a;
+    --color5: #ffd236;
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../img/fondo.png);
+    background-size: cover;
+}
+
+header{
+    background: var(--color1);
+}
+
+.logo img {
+    width: 400px;
+}
+
+.btn {
+    background: var(--color3);
+    color: #fff;
+}
+
+nav {
+    background: var(--color2);
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--color1);
+    color: #fff;
+    height: 4em;
+}

@@ -1,0 +1,31 @@
+{% extends 'core/layout.html' %}
+{% load static %}
+
+{% block title %} Acerca de {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col m-2">
+            <p class="h2 text-center text-white">
+                Acerca de Jaguarete KAA S.A
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 m-auto">
+            <img src="{% static 'img/jaguarete.jpeg' %}" class="img-thumbnail p-2 m-2" alt="Imagen acerca de">
+        </div>
+        <div class="col-lg-6 col-sm-12 m-auto">
+            <p class="text-white text-capitalize">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae bibendum enim. Pellentesque molestie, lacus auctor luctus vulputate, nisi risus fermentum felis, sit amet pulvinar mi eros ut risus. Fusce molestie quis leo at suscipit. Aenean elit nisi, tincidunt ut mi quis, cursus porta eros. Quisque tristique vulputate dolor, sed volutpat nibh ultricies accumsan. Vivamus velit orci, faucibus vel malesuada vehicula, dapibus ut augue. Nulla at mattis sapien. Etiam quam dui, luctus sit amet lorem quis, tempor sagittis mi. Aenean egestas, velit et semper luctus, neque massa sollicitudin est, id scelerisque ipsum magna quis elit.
+
+                Nam in mauris nec erat consequat egestas ut quis mi. Nunc dapibus gravida nisl. Integer volutpat, libero sit amet varius tempor, turpis ligula vulputate lorem, et tristique velit nunc vitae augue. Integer nec justo velit. Nulla urna urna, rhoncus in mauris non, consectetur vulputate quam. Ut egestas hendrerit nibh ac tristique. Aliquam ac dictum dui. 
+            </p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'core/layout.html' %}
+
+{% load humanize %}
+
+{% block title %}{{ cat.nombre }}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mt-2 mb-2">
+        <div class="col-12 text-white text-center">
+            <h2>Listado de productos: {{ cat.nombre }}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-success table-striped">
+                <thead>
+                  {% if productos %}
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Titulo</th>
+                      <th scope="col">Descripcion</th>
+                      <th scope="col">Acción</th>
+                    </tr>
+                  {% else %}
+                    <tr>
+                      <td>
+                    
+                      </td>
+                    </tr>
+                  {% endif %}
+                </thead>
+                <tbody>
+                    {% if productos %}
+                      {% for p in productos %}
+                        <tr>
+                            <th scope="row">{{ p.id }}</th>
+                            <td>{{ p.titulo }}</td>
+                            <td>{{ p.descripcion | truncatewords:10}}</td>
+                            <td class="text-center"><a href="{% url 'ver_producto' p.id %}"><i class="fas fa-eye text-dark text-center"></i></a></td>
+                        </tr>
+                      {% endfor %}
+                    {% else %}
+                        <tr>
+                          <td></td>
+                          <td>
+                            <h2>No hay resultados en tu busqueda</h2>
+                          </td>
+                          <td></td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col">
+      (% if productos %)
+        (% for p in productos %)
+          <ul>
+            <li>
+              <a href="">{{ p.titulo }}: {{ p.descripcion | truncatewords:10 }}</a>
+            </li>
+          </ul>
+        (% endfor %)
+      (% else %)
+          <h2 class="text-center text-white">No hay productos en la busqueda</h2>
+      (% endif %)
+    </div>
+  </div>
+  
+</div> -->
+{% endblock %}
